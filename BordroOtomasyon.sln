@@ -5,7 +5,9 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BordroOtomasyon.Domain", "BordroOtomasyon.Domain\BordroOtomasyon.Domain.csproj", "{25BAD717-E005-447C-A9D8-29D910BB8A56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BordroOtomasyon.Infrastructure", "BordroOtomasyon.Infrastructure\BordroOtomasyon.Infrastructure.csproj", "{C0EA65F2-4795-4059-B623-59BD7BE6A3E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BordroOtomasyon.Infrastructure", "BordroOtomasyon.Infrastructure\BordroOtomasyon.Infrastructure.csproj", "{C0EA65F2-4795-4059-B623-59BD7BE6A3E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BordroOtomasyon.UI", "BordroOtomasyon.UI\BordroOtomasyon.UI.csproj", "{4FFB8375-C831-4FDD-8407-1C49F114182E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C0EA65F2-4795-4059-B623-59BD7BE6A3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0EA65F2-4795-4059-B623-59BD7BE6A3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0EA65F2-4795-4059-B623-59BD7BE6A3E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFB8375-C831-4FDD-8407-1C49F114182E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFB8375-C831-4FDD-8407-1C49F114182E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFB8375-C831-4FDD-8407-1C49F114182E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFB8375-C831-4FDD-8407-1C49F114182E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
