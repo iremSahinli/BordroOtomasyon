@@ -9,3 +9,5 @@ namespace BordroOtomasyon.Domain.Entites
         public double Miktar { get; set; }
     }
 }
+
+
