@@ -1,4 +1,5 @@
 ﻿using BordroOtomasyon.Domain.Core.BaseEntites;
+using BordroOtomasyon.Domain.Entites;
 using BordroOtomasyon.Domain.Enums;
 using BordroOtomasyon.Infrastructure.Configurations;
 using Microsoft.AspNetCore.Identity;
@@ -21,6 +22,12 @@ namespace BordroOtomasyon.Infrastructure.Context
 
         }
         //Db setler:
+        public virtual DbSet<Admin> Admins { get; set; }
+        public virtual DbSet<Tediye> Tediyeler { get; set; }
+        public virtual DbSet<Ikramiye> Ikramiyeler { get; set; }
+        public virtual DbSet<KiyafetOdenegi> KiyafetOdenekler { get; set; }
+
+
 
 
         protected override void OnModelCreating(ModelBuilder builder)
