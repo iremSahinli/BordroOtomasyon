@@ -2,6 +2,7 @@ using BordroOtomasyon.Infrastructure.Extentions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+
 namespace BordroOtomasyon.UI
 {
     internal static class Program
@@ -17,7 +18,7 @@ namespace BordroOtomasyon.UI
         {
             var configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.Json")
+            .AddJsonFile("appsettings.json")
             .Build();
 
 
@@ -36,6 +37,9 @@ namespace BordroOtomasyon.UI
 
             //Extenstions Services Method:
             services.AddInfrastructureServices(configuration);
+
+            
+
 
         }
     }

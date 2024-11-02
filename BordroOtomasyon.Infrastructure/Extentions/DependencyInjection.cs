@@ -18,7 +18,7 @@ namespace BordroOtomasyon.Infrastructure.Extentions
             services.AddDbContext<AppDbContext>(opt =>
             {
                 opt.UseLazyLoadingProxies();
-                opt.UseSqlServer(configuration.GetConnectionString("AppConnectionString"));
+                opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
             return services;
         }
