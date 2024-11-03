@@ -2,30 +2,24 @@ using BordroOtomasyon.Infrastructure.Extentions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-
 namespace BordroOtomasyon.UI
 {
     internal static class Program
     {
-        private static ServiceProvider serviceProvider; //kuruldu.
+        private static ServiceProvider serviceProvider;
 
-
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             var configuration = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json")
-            .Build();
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
 
+            var serviceCollection = new ServiceCollection();
+            ConfigureServices(serviceCollection, configuration);
 
-            var serviceColection = new ServiceCollection();
-            ConfigureServices(serviceColection, configuration);
-
-            serviceProvider = serviceColection.BuildServiceProvider();
+            serviceProvider = serviceCollection.BuildServiceProvider();
 
             ApplicationConfiguration.Initialize();
             Application.Run(serviceProvider.GetRequiredService<Form1>());
@@ -35,12 +29,8 @@ namespace BordroOtomasyon.UI
         {
             services.AddTransient<Form1>();
 
-            //Extenstions Services Method:
+            // Extensions Services Method:
             services.AddInfrastructureServices(configuration);
-
-            
-
-
         }
     }
 }

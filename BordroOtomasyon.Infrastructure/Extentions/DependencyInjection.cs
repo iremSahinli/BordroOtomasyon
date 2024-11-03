@@ -1,4 +1,6 @@
 ﻿using BordroOtomasyon.Infrastructure.Context;
+using BordroOtomasyon.Infrastructure.Repositories.TediyeRepositories;
+using BordroOtomasyon.Infrastructure.Seeds;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +22,11 @@ namespace BordroOtomasyon.Infrastructure.Extentions
                 opt.UseLazyLoadingProxies();
                 opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
+
+            services.AddScoped<ITediyeRepository, TediyeRepository>();
+
+            //AdminSeed kısmı migrate update için kapatılmalı!!
+            AdminSeed.SeedAsync(configuration).GetAwaiter().GetResult();
             return services;
         }
     }
