@@ -26,8 +26,4 @@
     <ProjectReference Include="..\BordroOtomasyon.Domain\BordroOtomasyon.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\IkramiyeRepositories\" />
-  </ItemGroup>
-
 </Project>
