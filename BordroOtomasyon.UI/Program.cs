@@ -22,12 +22,12 @@ namespace BordroOtomasyon.UI
             serviceProvider = serviceCollection.BuildServiceProvider();
 
             ApplicationConfiguration.Initialize();
-            Application.Run(serviceProvider.GetRequiredService<Form1>());
+            Application.Run(serviceProvider.GetRequiredService<LoginPanel>());
         }
 
         private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddTransient<Form1>();
+            services.AddTransient<LoginPanel>();
 
             // Extensions Services Method:
             services.AddInfrastructureServices(configuration);
