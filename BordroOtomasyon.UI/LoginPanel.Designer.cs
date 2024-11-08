@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             grpxLogin = new GroupBox();
-            btnGiris = new Button();
-            textBox1 = new TextBox();
-            txtEmail = new TextBox();
-            label1 = new Label();
             label2 = new Label();
+            label1 = new Label();
+            btnGiris = new Button();
+            txtPassword = new TextBox();
+            txtEmail = new TextBox();
             grpxLogin.SuspendLayout();
             SuspendLayout();
             // 
@@ -43,7 +43,7 @@
             grpxLogin.Controls.Add(label2);
             grpxLogin.Controls.Add(label1);
             grpxLogin.Controls.Add(btnGiris);
-            grpxLogin.Controls.Add(textBox1);
+            grpxLogin.Controls.Add(txtPassword);
             grpxLogin.Controls.Add(txtEmail);
             grpxLogin.Location = new Point(86, 41);
             grpxLogin.Margin = new Padding(4);
@@ -54,30 +54,14 @@
             grpxLogin.TabStop = false;
             grpxLogin.Text = "Login";
             // 
-            // btnGiris
+            // label2
             // 
-            btnGiris.Location = new Point(122, 312);
-            btnGiris.Name = "btnGiris";
-            btnGiris.Size = new Size(170, 46);
-            btnGiris.TabIndex = 3;
-            btnGiris.Text = "Login";
-            btnGiris.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(122, 172);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Şifrenizi Giriniz";
-            textBox1.Size = new Size(217, 29);
-            textBox1.TabIndex = 1;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(122, 103);
-            txtEmail.Name = "txtEmail";
-            txtEmail.PlaceholderText = "Email Giriniz";
-            txtEmail.Size = new Size(217, 29);
-            txtEmail.TabIndex = 2;
+            label2.AutoSize = true;
+            label2.Location = new Point(38, 175);
+            label2.Name = "label2";
+            label2.Size = new Size(84, 21);
+            label2.TabIndex = 5;
+            label2.Text = "Password:";
             // 
             // label1
             // 
@@ -88,14 +72,31 @@
             label1.TabIndex = 4;
             label1.Text = "Email:";
             // 
-            // label2
+            // btnGiris
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(38, 175);
-            label2.Name = "label2";
-            label2.Size = new Size(84, 21);
-            label2.TabIndex = 5;
-            label2.Text = "Password:";
+            btnGiris.Location = new Point(122, 312);
+            btnGiris.Name = "btnGiris";
+            btnGiris.Size = new Size(170, 46);
+            btnGiris.TabIndex = 3;
+            btnGiris.Text = "Login";
+            btnGiris.UseVisualStyleBackColor = true;
+            btnGiris.Click += btnGiris_Click;
+            // 
+            // txtPassword
+            // 
+            txtPassword.Location = new Point(122, 172);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PlaceholderText = "Şifrenizi Giriniz";
+            txtPassword.Size = new Size(217, 29);
+            txtPassword.TabIndex = 1;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(122, 103);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PlaceholderText = "Email Giriniz";
+            txtEmail.Size = new Size(217, 29);
+            txtEmail.TabIndex = 2;
             // 
             // LoginPanel
             // 
@@ -108,6 +109,7 @@
             Margin = new Padding(4);
             Name = "LoginPanel";
             Text = "LoginPanel";
+            Load += LoginPanel_Load;
             grpxLogin.ResumeLayout(false);
             grpxLogin.PerformLayout();
             ResumeLayout(false);
@@ -117,7 +119,7 @@
 
         private GroupBox grpxLogin;
         private Button btnGiris;
-        private TextBox textBox1;
+        private TextBox txtPassword;
         private TextBox txtEmail;
         private Label label2;
         private Label label1;
